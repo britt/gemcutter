@@ -6,6 +6,7 @@ source "http://gems.github.com"
 
 gem "rails", "2.3.4"
 gem "rack",  "1.0.1"
+gem 'rdoc',  "2.4.3"
 
 gem "aws-s3",           "0.6.2", :require_as => "aws/s3"
 gem "clearance",        "0.8.2"
