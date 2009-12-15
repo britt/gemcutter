@@ -14,13 +14,6 @@ class GemcutterTest < ActiveSupport::TestCase
       assert_equal "#{Rails.root}/server/quick/Marshal.4.8", Gemcutter.server_path("quick", "Marshal.4.8")
     end
   end
-  
-  context "configuration" do
-    should "be able to turn on local gem hosting" do
-      Gemcutter.host_gems_locally = true
-      assert Gemcutter.host_gems_locally?
-    end
-  end
 
   context "creating a new gemcutter" do
     setup do
