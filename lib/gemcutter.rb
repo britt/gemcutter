@@ -1,5 +1,11 @@
 class Gemcutter
-  if Rails.env.development? || Rails.env.test?
+  cattr_writer :host_gems_locally
+  
+  def self.host_gems_locally?
+    @@host_gems_locally ||= false
+  end
+  
+  if Rails.env.development? || Rails.env.test? || Gemcutter.host_gems_locally?
     include Vault::FS
   else
     include Vault::S3
