@@ -43,4 +43,6 @@ config.middleware.insert_after(::Rack::Lock, ::Rack::Cache,
   :verbose     => true,
   :metastore   => memcache_store,
   :entitystore => memcache_store)
+  
+Gemcutter.host_gems_locally = true
 
